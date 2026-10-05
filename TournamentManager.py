@@ -1,8 +1,7 @@
 ADMINUsr = "ADMIN"
 ADMINPdw = "676767"
 
-allParticipant = [[],
-                  []] 
+allParticipant = [] 
 
 yellowPart = [[],
               []]
@@ -29,6 +28,7 @@ print("9. Exit")
 def register():
     print("---------Participant Registeration Portal---------")
     name = input("Participant Name:")
+    allParticipant.append(name)
     #House Selection
     print(" House Selection \n1. Red\n2. Green\n3. Blue\n4. Yellow")
     while True:
@@ -36,6 +36,7 @@ def register():
 
         if house == 1:
              house = "Red"
+             
              break
         elif house == 2:
              house = "Green"
@@ -56,6 +57,7 @@ def register():
 
         else: 
              print("Invalid Year Group.")
+    
 
 
         
@@ -89,3 +91,4 @@ def adminLogin ():
 # userSelection = int(input("Menu Selection:"))
 
 register()
+print(allParticipant)
